@@ -1,0 +1,99 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+filename = Panda_01.jpeg
+filename = Dog_02.jpg
+filename = .Gold_bar_01.jpg
+filename = Dog_01.jpg
+
+Pet Image Label Dictionary has 3 key-value pairs.
+Below are 3 of them:
+ 1 key:                  Panda_01.jpeg  label:                      panda
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                     Dog_01.jpg  label:                        dog
+images_dir = uploaded_images/
+len(filename_list) = 4
+
+     MATCH:
+
+ NOT A MATCH:
+
+                 Panda_01.jpeg: 
+Real:                      panda   Classifier:              teddy, teddy bear
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: cocker spaniel, english cocker spaniel, cocker
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+# Total Images 3 # Matches: 0 # NOT Matches: 3
+
+adjust_results4_isadog Printing all key-value pairs in dictionary results_dic:
+
+Filename= Panda_01.jpeg 
+pet_image Label= panda 
+Classifier Label= teddy, teddy bear 
+match= 0
+
+Filename= Dog_02.jpg 
+pet_image Label= dog 
+Classifier Label= cocker spaniel, english cocker spaniel, cocker 
+match= 0
+
+Filename= Dog_01.jpg 
+pet_image Label= dog 
+Classifier Label= golden retriever 
+match= 0
+dogfile = dognames.txt
+panda teddy, teddy bear 0 0
+dog cocker spaniel, english cocker spaniel, cocker 1 1
+dog golden retriever 1 1
+
+     MATCH:
+
+ NOT A MATCH:
+
+                 Panda_01.jpeg: 
+Real:                      panda   Classifier:              teddy, teddy bear  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: cocker spaniel, english cocker spaniel, cocker  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 3 # Matches: 0 # NOT Matches: 3
+Number of dog images = 2
+Number of non dog match = 1
+Number of dog match = 2
+Number of breed match = 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  3  N Dog Images:  2  N NotDog Images:  1 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  3  N Dog Images:  2  N NotDog Images:  1 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   3
+N Dog Images        :   2
+N Not-Dog Images    :   1
+ 
+pct_match           : 0.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 0.00
+pct_correct_notdogs : 100.00
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier: cocker spaniel, english cocker spaniel, cocker
+Real:                        dog   Classifier:               golden retriever
+
+** Total Elapsed Runtime: 0:0:0
